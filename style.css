@@ -96,6 +96,8 @@ body {
     border-radius: 5px;
     width: 250px;
     font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin-right: 10px;
 }
 
 .score-row {
@@ -161,4 +163,19 @@ body {
     background-color: transparent;
     border-left: 10px solid #fff; /* Bande blanche */
     border-right: 10px solid #fff; /* Bande blanche */
+}
+#bluePlayer, #redPlayer {
+    position: absolute; /* Positionné relativement au conteneur parent (#gameScreen) */
+    bottom: 60px; /* Positionner le joueur 60px au-dessus du bas du conteneur */
+    width: 100px; /* Largeur agrandie pour le joueur */
+    height: 150px; /* Hauteur agrandie pour le joueur */
+    background-size: cover; /* Adapter les images à la taille de l'élément */
+    background-repeat: no-repeat; /* Éviter la répétition des images */
+    z-index: 10; /* S'assurer que le joueur est au-dessus du canvas */
+}
+#bluePlayer {
+    left: 250px;
+}
+#redPlayer {
+    left: 450px; /* Position initiale différente pour le joueur rouge */
 }
