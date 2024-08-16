@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
-   sodipodi:docname="blue-player-turning-kick.svg"
+   sodipodi:docname="red-player-turning-kick.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -33,7 +33,7 @@
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g13167"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -165,7 +165,7 @@
      transform="translate(-70.273243,-42.981708)">
     <g
        id="g907"
-       transform="translate(7.4011366)">
+       transform="matrix(-1,0,0,1,233.14535,0)">
       <g
          id="g8972"
          transform="translate(8.2228822,35.083159)">
@@ -257,7 +257,7 @@
             </g>
             <path
                id="path848-9-3-9"
-               style="fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1.10775;stroke-linecap:round;stroke-miterlimit:3.5;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+               style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1.10775;stroke-linecap:round;stroke-miterlimit:3.5;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
                d="m -1.9091678,77.170917 c -0.2686398,10.778993 -0.4428225,21.634224 -0.6761759,32.442303 3.1489959,-1.23196 7.4080151,-2.34076 11.8260908,-2.64258 4.4220689,0.22561 8.6973259,1.26086 11.8645669,2.43838 C 20.70831,98.606374 20.369756,87.755559 19.937905,76.982607 19.61649,72.107687 15.08535,75.934044 9.0061081,75.986443 c -6.079237,0.05241 -10.6677313,-3.69535 -10.9152759,1.184474 z"
                sodipodi:nodetypes="ccccccc" />
           </g>
@@ -288,7 +288,7 @@
              sodipodi:nodetypes="cccccc" />
           <path
              id="path1405"
-             style="fill:#0000ff;stroke:#000000;stroke-width:0.907226;stroke-linecap:round;stroke-miterlimit:3.5;stroke-opacity:1;stop-color:#000000"
+             style="fill:#ff0000;stroke:#000000;stroke-width:0.907226;stroke-linecap:round;stroke-miterlimit:3.5;stroke-opacity:1;stop-color:#000000"
              d="m 79.177795,27.893535 c -1.06996,1.437966 -2.802658,7.021964 -1.760667,11.014585 1.706341,6.503595 7.348012,10.658548 12.60102,9.280345 5.25297,-1.378349 8.12798,-7.767903 6.421513,-14.271464 -1.046523,-3.986074 -5.285677,-8.005289 -6.920583,-8.736804 -1.634906,-0.731515 -9.271323,1.275372 -10.341283,2.713338 z"
              sodipodi:nodetypes="zccczz" />
         </g>

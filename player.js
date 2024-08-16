@@ -19,10 +19,10 @@ const playerConfigs = {
         moveImages: ['img/blue-player-move-up.svg', 'img/blue-player-move-down.svg'],
         blockImage: 'img/blue-player-block.svg',
         punchImage: 'img/blue-player-punch.svg',
-        trunkKickImage: 'img/blue-player-trunk-kick.svg',
-        headKickImage: 'img/blue-player-head-kick.svg',
-        turningTrunkKickImages: ['img/blue-player-turning-kick.svg', 'img/blue-player-turning-trunk-kick.svg'],
-        turningHeadKickImages: ['img/blue-player-turning-kick.svg', 'img/blue-player-turning-head-kick.svg'],
+        trunkKickImage: ['img/blue-player-kick-prepare.svg', 'img/blue-player-trunk-kick.svg', 'img/blue-player-kick-prepare.svg'],
+        headKickImage: ['img/blue-player-kick-prepare.svg', 'img/blue-player-head-kick.svg', 'img/blue-player-kick-prepare.svg'],
+        turningTrunkKickImages: ['img/blue-player-turning-kick.svg', 'img/blue-player-turning-kick-prepare.svg', 'img/blue-player-turning-trunk-kick.svg'],
+        turningHeadKickImages: ['img/blue-player-turning-kick.svg', 'img/blue-player-turning-kick-prepare.svg', 'img/blue-player-turning-head-kick.svg'],
         gotTrunkImage: 'img/blue-player-got-trunk.svg',
         gotHeadImage: 'img/blue-player-got-head.svg',
         element: null,
@@ -43,10 +43,10 @@ const playerConfigs = {
         moveImages: ['img/red-player-move-up.svg', 'img/red-player-move-down.svg'],
         blockImage: 'img/red-player-block.svg',
         punchImage: 'img/red-player-punch.svg',
-        trunkKickImage: 'img/red-player-trunk-kick.svg',
-        headKickImage: 'img/red-player-head-kick.svg',
-        turningTrunkKickImages: ['img/red-player-turning-kick.svg', 'img/red-player-turning-trunk-kick.svg'],
-        turningHeadKickImages: ['img/red-player-turning-kick.svg', 'img/red-player-turning-head-kick.svg'],
+        trunkKickImage: ['img/blue-player-kick-prepare.svg', 'img/red-player-trunk-kick.svg', 'img/blue-player-kick-prepare.svg'], 
+        headKickImage: ['img/blue-player-kick-prepare.svg', 'img/red-player-head-kick.svg', 'img/blue-player-kick-prepare.svg'],
+        turningTrunkKickImages: ['img/red-player-turning-kick.svg', 'img/red-player-turning-kick-prepare.svg', 'img/red-player-turning-trunk-kick.svg'],
+        turningHeadKickImages: ['img/red-player-turning-kick.svg', 'img/red-player-turning-kick-prepare.svg', 'img/red-player-turning-head-kick.svg'],
         gotTrunkImage: 'img/red-player-got-trunk.svg',
         gotHeadImage: 'img/red-player-got-head.svg',
         element: null,
@@ -188,18 +188,23 @@ function startAnimation(config, animationName, images, duration) {
     config.currentAnimation = animationName;
 
     if (Array.isArray(images)) {
-        let firstImageDuration = duration * 0.4;
-        let secondImageDuration = duration * 0.6;
+        let firstImageDuration = duration * 0.25;
+        let secondImageDuration = duration * 0.5;
+        let thirdImageDuration = duration * 0.25;
         if (animationName.includes('turning')) {
-            firstImageDuration = duration * 0.4;
-            secondImageDuration = duration * 0.6;
+            firstImageDuration = duration * 0.3;
+            secondImageDuration = duration * 0.3;
+            thirdImageDuration = duration * 0.4;
         }
 
         config.element.style.backgroundImage = `url(${images[0]})`;
         setTimeout(() => {
             config.element.style.backgroundImage = `url(${images[1]})`;
             setTimeout(() => {
-                resetToGuard(config);
+                config.element.style.backgroundImage = `url(${images[2]})`;
+                setTimeout(() => {
+                    resetToGuard(config);
+                }, thirdImageDuration);
             }, secondImageDuration);
         }, firstImageDuration);
     } else {
